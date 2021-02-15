@@ -5,7 +5,10 @@ var passwordDisplay = document.querySelector("#password");
 // Write password to the #password input
 function writePassword() {
     var passwordLength = prompt("How long would you like you password to be? (Password length must be between 8 and 128 characters long)");
-    if ((passwordLength >= 8) && (passwordLength <= 128)) {
+
+    if ((passwordLength < 8) || (passwordLength > 128)) {
+        alert("Your choice must be between 8 and 128 characters.  Try again.");
+    } else {
         var confirmNumbers = confirm("Would you like to use numbers in your password?");
         var confirmSymbols = confirm("Would you like to use symbols in your password?");
         var confirmLowerCase = confirm("Would you like to use lower case letters in your password?");
@@ -108,15 +111,23 @@ function writePassword() {
                 password += symbols.charAt(randomCharacter);
             }
 
-        
+        } else if ((!confirmNumbers) && (!confirmSymbols) && (confirmLowerCase) && (!ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * lowerCase.length);
+                password += lowerCase.charAt(randomCharacter);
+            }
 
+        } else if ((!confirmNumbers) && (!confirmSymbols) && (!confirmLowerCase) && (ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * upperCase.length);
+                password += upperCase.charAt(randomCharacter);
+            }
 
+        } else {
+            alert("You must choose at least one of the four options!");
+        }
 
-
-
-
-
-    passwordDisplay.textContent = password;
+        passwordDisplay.textContent = password;
     
     }
 
