@@ -14,4 +14,8 @@ I used a random number generator inside a for loop to assign a random index of t
 
 I concluded the the definition of the writePassword function by adding text content to the text display element by attributing the value of the newly defined password variable as the text content to be added.
 
-Below is a screenshot of the page as well as a link to the running application.
+Below is a screenshot of the page as well as a link to the running application:
+
+https://codyregis6891.github.io/random-password-generator/
+
+![password-generator-screenshot](./assets/images/random-password.png)
