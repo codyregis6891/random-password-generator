@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var newPassword = document.querySelector("#password");
+var passwordDisplay = document.querySelector("#password");
 
 // Write password to the #password input
 function writePassword() {
@@ -28,8 +28,95 @@ function writePassword() {
         var symUp = symbols + upperCase;
         var lowUp = lowerCase + upperCase;
 
+        var password = "";
+
+        if ((confirmNumbers) && (confirmSymbols) && (confirmLowerCase) && (ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * everything.length);
+                password += everything.charAt(randomCharacter);
+            }
+
+        } else if ((confirmNumbers) && (confirmSymbols) && (confirmLowerCase) && (!ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * numSymLow.length);
+                password += numSymLow.charAt(randomCharacter);
+            }
+
+        } else if ((confirmNumbers) && (confirmSymbols) && (!confirmLowerCase) && (ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * numSymUp.length);
+                password += numSymUp.charAt(randomCharacter);
+            }
+        
+        } else if ((confirmNumbers) && (!confirmSymbols) && (confirmLowerCase) && (ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * numLowUp.length);
+                password += numLowUp.charAt(randomCharacter);
+            }
+
+        } else if ((!confirmNumbers) && (confirmSymbols) && (confirmLowerCase) && (ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * symLowUp.length);
+                password += symLowUp.charAt(randomCharacter);
+            }
+
+        } else if ((confirmNumbers) && (confirmSymbols) && (!confirmLowerCase) && (!ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * numSym.length);
+                password += numSym.charAt(randomCharacter);
+            }
+
+        } else if ((confirmNumbers) && (!confirmSymbols) && (confirmLowerCase) && (!ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * numLow.length);
+                password += numLow.charAt(randomCharacter);
+            }
+
+        } else if ((confirmNumbers) && (!confirmSymbols) && (!confirmLowerCase) && (ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * numUp.length);
+                password += numUp.charAt(randomCharacter);
+            }
+
+        } else if ((!confirmNumbers) && (confirmSymbols) && (confirmLowerCase) && (!ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * symLow.length);
+                password += symLow.charAt(randomCharacter);
+            }
+
+        } else if ((!confirmNumbers) && (confirmSymbols) && (!confirmLowerCase) && (ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * symUp.length);
+                password += symUp.charAt(randomCharacter);
+            }
+
+        } else if ((!confirmNumbers) && (!confirmSymbols) && (confirmLowerCase) && (ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * lowUp.length);
+                password += lowUp.charAt(randomCharacter);
+            }
+
+        } else if ((confirmNumbers) && (!confirmSymbols) && (!confirmLowerCase) && (!ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * numbers.length);
+                password += numbers.charAt(randomCharacter);
+            }
+
+        } else if ((!confirmNumbers) && (confirmSymbols) && (!confirmLowerCase) && (!ConfirmUpperCase)) {
+            for (i = 0; i < passwordLength; i++) {
+                var randomCharacter = Math.floor(Math.random() * symbols.length);
+                password += symbols.charAt(randomCharacter);
+            }
+
         
 
+
+
+
+
+
+
+    passwordDisplay.textContent = password;
     
     }
 
