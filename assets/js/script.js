@@ -4,7 +4,7 @@ var passwordDisplay = document.querySelector("#password");
 
 // Write password to the #password input
 function writePassword() {
-    var passwordLength = prompt("How long would you like you password to be? (Password length must be between 8 and 128 characters long)");
+    var passwordLength = prompt("How many characters would you like you password to be? (Enter a number between 8 and 128)");
 
     if ((passwordLength < 8) || (passwordLength > 128)) {
         alert("Your choice must be between 8 and 128 characters.  Try again.");
