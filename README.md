@@ -34,5 +34,5 @@ This is a simple yet effective application that creates a random password that t
 
 ## Questions or Issues?
 
-* Email: codyregis6891@yahoo.com
-* https://github.com/codyregis6891/workday-scheduler/issues
+* Email: codyregis6891@gmail.com
+* https://github.com/codyregis6891/random-password-generator/issues
