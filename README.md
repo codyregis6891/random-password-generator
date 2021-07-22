@@ -1,4 +1,4 @@
-# Workday Scheduler
+# Random Password Generator
 
 ## License
 
