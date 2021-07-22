@@ -1,21 +1,38 @@
-For this assignment I was given a random password generator that was not working. My task was to give it life via javascript.
+# Workday Scheduler
 
-I started by assigning variables to the button and the text display elements of the index.html page.  I then defined the writePassword function with a series of if else statements.  
+## License
 
-In the first one, I created an alert to choose a password length between the required range of 8 and 128 if the user failed to do so.  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-If the user did choose an acceptable length, it triggered a series of confirmation alerts for the user to decide if they wanted their password to contain numbers, symbols, lowercase letters, and uppercase letters.  The user's choices were stored in defined variables.  
+![password-generator-screenshot](./assets/images/random-password.png)
 
-I then assigned each of those 4 user choices possible options in 4 seperate arrays.  I created 11 more arrays that were different combinations or the 4 previous arrays, as the user has the option to pick and choose whichever of the four prompts they do or do not want. 
-
-I then started my 2nd if else statement that covered every possible outcome based on which choices were made by the user.  If the user did not choose any of the 4 available options, I added an alert that would remind the user to choose at least one of the four options.  
-
-I used a random number generator inside a for loop to assign a random index of the chosen array before defining a password variable as the value of the added of values of the random index integers chosen.
-
-I concluded the the definition of the writePassword function by adding text content to the text display element by attributing the value of the newly defined password variable as the text content to be added.
-
-Below is a screenshot of the page as well as a link to the running application:
+## Live Application
 
 https://codyregis6891.github.io/random-password-generator/
 
-![password-generator-screenshot](./assets/images/random-password.png)
+## Technology Used
+
+* Javascript
+* HTML
+* CSS
+
+
+## Description
+
+This is a simple yet effective application that creates a random password that the user can generate to increase their web security.
+
+## Installation
+
+1. Clone the Repo
+  ```sh
+  git@github.com:codyregis6891/random-password-generator.git
+  ```
+2. View on your browser via localhost
+  ```sh
+  Right-click on index.html in VSCode, then click on "Open in Default Browser"
+  ```
+
+## Questions or Issues?
+
+* Email: codyregis6891@yahoo.com
+* https://github.com/codyregis6891/workday-scheduler/issues
